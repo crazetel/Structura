@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-pink: #ff85a1;
+  --dark-pink: #c9184a;
+  --maroon: #590d22;
+  --sidebar-width: 260px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--maroon);
+}
+
+/* --- LOGIN SCREEN (Split Screen Design) --- */
+.main-screen {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.visual-side {
+  flex: 1.2;
+  background: linear-gradient(135deg, var(--primary-pink) 0%, var(--dark-pink) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 40px;
+}
+
+.brand-content h1 { font-size: 3.5rem; line-height: 1.1; font-weight: 800; }
+.brand-content h1 span { color: var(--maroon); }
+
+.form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.login-box { width: 100%; max-width: 380px; padding: 20px; }
+
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--maroon); font-size: 0.9rem; }
+.input-group input {
+  width: 100%; padding: 14px; border: 2px solid #f0f0f0;
+  border-radius: 12px; transition: 0.3s; background: #fafafa;
+}
+.input-group input:focus { outline: none; border-color: var(--primary-pink); background: white; }
+
+.submit-btn {
+  width: 100%; padding: 16px; background: var(--dark-pink);
+  color: white; border: none; border-radius: 12px;
+  font-weight: 700; cursor: pointer; transition: 0.3s; margin-top: 10px;
+}
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(201, 24, 74, 0.3); }
+
+/* --- DASHBOARD LAYOUT --- */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: white;
+  border-right: 1px solid #eee;
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 15px; text-decoration: none;
+  color: #777; border-radius: 12px;
+  transition: 0.3s; font-weight: 600;
+}
+.nav-link:hover { background: #fff0f3; color: var(--dark-pink); }
+
+.main-content {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+  background: #fdf2f4;
+}
+
+/* --- DASHBOARD COMPONENTS --- */
+.dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
+.dash-header h1 { font-weight: 800; color: var(--maroon); }
+
+.weather-widget { 
+  background: white; padding: 10px 20px; border-radius: 50px; 
+  display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: white; padding: 1.5rem; border-radius: 20px;
+  display: flex; align-items: center; gap: 1.2rem;
+  box-shadow: 0 10px 20px rgba(255, 133, 161, 0.05);
+}
+
+.chart-card {
+  background: white; padding: 2rem; border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+/* --- FLOATING CHATBOT --- */
+.chatbot-wrapper { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+.chat-fab {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--dark-pink); color: white; border: none;
+  cursor: pointer; box-shadow: 0 10px 20px rgba(201, 24, 74, 0.3);
+  display: flex; align-items: center; justify-content: center;
+}
+.chat-window {
+  position: absolute; bottom: 80px; right: 0;
+  width: 320px; height: 450px; background: white;
+  border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  display: flex; flex-direction: column; overflow: hidden;
+  border: 1px solid var(--primary-pink);
+}

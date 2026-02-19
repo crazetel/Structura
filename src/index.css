@@ -1,0 +1,17 @@
+/* Zero out the defaults that are breaking your layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fdf2f4; /* Very soft pink background */
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
