@@ -15,7 +15,7 @@ function Login() {
     <div className="main-screen">
       <div className="visual-side">
         <div className="brand-content">
-          <h1>MINI ENROLLMENT SYSTEM<br/><span>using react by crezztell</span></h1>
+          <h1>Login System<br/><span>Test</span></h1>
           <p style={{ marginTop: '1rem', opacity: 0.9 }}>Innovating education for the next generation.</p>
         </div>
       </div>
